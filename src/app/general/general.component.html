@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="row"><p></p></div>
+    <div class="row"><p></p></div>
+    <div class="row"><p></p></div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+        <p class="text-center"><b>Test technique WEB-ATRIO réalisé par Lalau Florence réalisé le 06/12/2022</b></p>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    <app-progress-bar *ngFor="let progressElement of (progress)" [theProgress]="progressElement"></app-progress-bar>
+
+    <div class="row"><p></p></div>
+    <div class="row"><p></p></div>
+    <div class="row"><p></p></div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <button (click)="onSetZero()">Remettre à zéro les compteurs</button>  
+            <button (click)="onAddFive()">Ajouter 5%</button>  
+            <button (click)="onAddTen()">Ajouter 10%</button>  
+        </div>
+        <div class="col-sm-3">{{error}}</div>
+    </div>
+
+</div>

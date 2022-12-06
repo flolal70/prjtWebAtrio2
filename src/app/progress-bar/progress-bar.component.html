@@ -1,0 +1,19 @@
+<div class="row"><p></p></div>
+<div class="row"><p></p></div>
+<div class="row"><p></p></div>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="progress col-sm-8" *ngIf="theProgress > 75">
+        <div class="progress-bar" [ngStyle]="{ width: + theProgress+ '%' }" style="background: #30DB63;">{{theProgress}}%</div>
+    </div>
+    <div class="progress col-sm-8" *ngIf="theProgress > 50 && theProgress <= 75">
+        <div class="progress-bar" [ngStyle]="{ width: + theProgress+ '%' }" style="background: #60E8B6;">{{theProgress}}%</div>
+    </div>
+    <div class="progress col-sm-8" *ngIf="theProgress > 25 && theProgress <= 50">
+        <div class="progress-bar" [ngStyle]="{ width: + theProgress+ '%' }" style="background: #60ADE8;">{{theProgress}}%</div>
+    </div>
+    <div class="progress col-sm-8" *ngIf="theProgress <= 25">
+        <div class="progress-bar" [ngStyle]="{ width: + theProgress+ '%' }" style="background: #7160E8;">{{theProgress}}%</div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
